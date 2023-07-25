@@ -75,10 +75,8 @@ export default function App() {
 
   const handleChangePage = (event, newPage) => {
     event.preventDefault()
-    if (newPage > page) {
-      setData(nextData)
-      setNextData(null)
-    }
+    setData(nextData)
+    setNextData(null)
     setPage(newPage)
   }
 
