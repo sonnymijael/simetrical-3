@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { ArrowUpward, ArrowDownward } from '@mui/icons-material'
 import { CircularProgress, Dialog, DialogContent, DialogContentText, DialogTitle, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TablePagination, TextField, Checkbox, Button, Backdrop, Box } from '@mui/material'
 import './App.css'
 
@@ -140,6 +141,7 @@ export default function App() {
                       onClick={() => handleSort(columnName)}
                     >
                       {columnName}
+                      {sortConfig.key === columnName && (sortConfig.direction === "ascending" ? <ArrowUpward /> : <ArrowDownward />)}
                     </TableCell>
                   )
                 )}
